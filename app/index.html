@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>impact</title>
+    <!-- Bootstrap core CSS-->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <link href="./css/index.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header navbar-brand">
+            <div id="title"></div>
+        </div>
+    </div>
+</div>
+
+<div class="profiles">
+    <div class="container theme-showcase">
+        <form role="form" name="form_analysis" method="post" action="" onsubmit="return false;">
+
+            DU : <input type="date" placeholder="from"  name="datefrom" value="" >&nbsp;&nbsp;&nbsp;AU <input type="date" placeholder="to"  name="dateto" value="" >
+            <input type="hidden" name="indexProduct" value="0"/>
+
+        </form>
+
+    </div> <!-- /container -->
+</div>
+
+<!-- --------------------------------------------------------------- -->
+<!-- -------------------------------components-------------------------------- -->
+<!-- --------------------------------------------------------------- -->
+<div id="analytics-components">
+</div>
+<div id="lrs-components">
+</div>
+<div id="surveys-components">
+</div>
+
+<!-- wait------------------------------------>
+<div id="wait">
+</div>
+
+<!-- zoom------------------------------------>
+<div id="greyBackground">
+    <canvas id="chartZoom" ></canvas>
+</div>
+
+
+<!-- ============== Modules ==================================================-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script type="module" src="./dist/main.js"></script>
+
+
+</body>
+
+</html>

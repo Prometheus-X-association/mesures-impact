@@ -1,0 +1,377 @@
+{
+	"products":
+	[
+		{
+			"product_title" 		:"ma ressource1",
+			"product_id_matomo" 	:12,
+			"analytics": [
+				{
+					"dom_id"	: "visitors",
+					"display"	: true,
+					"html"		: "./html-components/visitors.html",
+					"button"	: "btnVisitors",
+					"url"		: "https://preprod.tralalere.com/mesure-impact/version-prometheus/php/getUsers.php",
+					"result": {
+						"chart": {
+							"display"	: true,
+							"type"		: "line",
+							"dom_id"	: "chartLines-visitors",
+							"data_array": {
+								"source" 	: "matomo_arrayVisitsDay",
+								"labels"	: "matomo_day",
+								"datasets"	: [
+									{
+										"data": "matomo_nb_visits",
+										"legend": "visites"
+									},
+									{
+										"data": "matomo_nb_uniq_visitors",
+										"legend": "visiteurs"
+									}
+								]
+							}
+
+						},
+						"texts": [
+							{
+								"dom_id"	: "nbTotalVisits",
+								"data"		: "matomo_nbTotalVisits"
+							},
+							{
+								"dom_id"	: "nbTotalUniques",
+								"data"		: "matomo_nbTotalVisitsUniques"
+							}
+						],
+						"table":
+						{
+							"display"	: false
+						}
+					}
+				},
+				{
+					"dom_id": "pages",
+					"display": true,
+					"html": "./html-components/pages.html",
+					"button": "btnPages",
+					"url": "https://preprod.tralalere.com/mesure-impact/version-prometheus/php/getPages.php",
+					"result": {
+						"chart": {
+							"display"	: false
+						},
+						"texts": [
+							{
+								"dom_id"	: "nbTotalViews",
+								"data"		: "matomo_nbTotalViews"
+							}
+						],
+						"table":
+							{
+								"display"	: true,
+								"dom_id"	: "tabletoppages",
+								"source" 	: "matomo_top10pages",
+								"data_array": [
+									{
+										"legend": "Top 10 : url",
+										"data"		: "matomo_page"
+									},
+									{
+										"legend": "Nombre de vues",
+										"data"		: "matomo_nbhits"
+									},
+									{
+										"legend": "Nombre de vues uniques",
+										"data"		: "matomo_nbvisits"
+									}
+
+								]
+							}
+
+
+					}
+				},
+				{
+					"dom_id"		: "devices",
+					"display"	: true,
+					"html"		: "./html-components/devices.html",
+					"button"	: "btnDevices",
+					"url"		: "https://preprod.tralalere.com/mesure-impact/version-prometheus/php/getDevices.php",
+					"result": {
+						"chart": {
+							"display"	: true,
+							"type"		: "pie",
+							"dom_id"	: "chartPie-devices",
+							"data_array": {
+								"source" 	: "matomo_devices",
+								"labels"	: "matomo_device",
+								"datasets"	: [
+									{
+										"data": "matomo_users",
+										"legend": "Périphériques"
+									}
+								]
+							}
+
+						},
+						"texts": [
+						],
+						"table":
+						{
+							"display"	: true,
+							"dom_id"	: "tabledevices",
+							"source" 	: "matomo_devices",
+							"data_array": [
+								{
+									"legend": "Périphérique",
+									"data"		: "matomo_device"
+								},
+								{
+									"legend": "Nombre de visiteurs",
+									"data"		: "matomo_users"
+								},
+								{
+									"legend": "Nombre de visites",
+									"data"		: "matomo_visits"
+								}
+							]
+						}
+					}
+				},
+				{
+					"dom_id"		: "browsers",
+					"display"	: true,
+					"html"		: "./html-components/browsers.html",
+					"button"	: "btnBrowsers",
+					"url"		: "https://preprod.tralalere.com/mesure-impact/version-prometheus/php/getBrowsers.php",
+					"result": {
+						"chart": {
+							"display"	: true,
+							"type"		: "pie",
+							"dom_id"	: "chartPie-browsers",
+							"data_array": {
+								"source" 	: "matomo_browsers",
+								"labels"	: "matomo_browser",
+								"datasets"	: [
+									{
+										"data": "matomo_users",
+										"legend": "Navigateurs"
+									}
+								]
+							}
+
+						},
+						"texts": [
+						],
+						"table":
+						{
+							"display"	: true,
+							"dom_id"	: "tablebrowsers",
+							"source" 	: "matomo_browsers",
+							"data_array": [
+								{
+									"legend": "Navigateurs",
+									"data"		: "matomo_browser"
+								},
+								{
+									"legend": "Nombre de visiteurs",
+									"data"		: "matomo_users"
+								},
+								{
+									"legend": "Nombre de visites",
+									"data"		: "matomo_visits"
+								}
+							]
+						}
+					}
+				},
+				{
+					"dom_id"		: "referrers",
+					"display"	: true,
+					"html"		: "./html-components/referrers.html",
+					"button"	: "btnReferrers",
+					"url"		: "https://preprod.tralalere.com/mesure-impact/version-prometheus/php/getReferrers.php",
+					"result": {
+						"chart": {
+							"display"	: false
+						},
+						"texts": [
+						],
+						"table":
+						{
+							"display"	: true,
+							"dom_id"	: "tablereferrer",
+							"source" 	: "matomo_referrers",
+							"data_array": [
+								{
+									"legend": "Site referrer",
+									"data"		: "matomo_page"
+								},
+								{
+									"legend": "Nombre de visiteurs",
+									"data"		: "matomo_nbvisitors"
+								},
+								{
+									"legend": "Nombre de visites",
+									"data"		: "matomo_nbvisits"
+								}
+							]
+						}
+					}
+				},
+				{
+					"dom_id": "downloads",
+					"display": true,
+					"html": "./html-components/downloads.html",
+					"button": "btnDownloads",
+					"url": "https://preprod.tralalere.com/mesure-impact/version-prometheus/php/getDownloads.php",
+					"result": {
+						"chart": {
+							"display"	: false
+						},
+						"texts": [
+							{
+								"dom_id"	: "nbDownloadFiles",
+								"data"		: "matomo_filesdownloaded"
+							},
+							{
+								"dom_id"	: "nbTotalFiles",
+								"data"		: "matomo_totaldownload"
+							},
+							{
+								"dom_id"	: "nbUsersFiles",
+								"data"		: "matomo_visitorswithdownloads"
+							}
+						],
+						"table":
+						{
+							"display"	: true,
+							"dom_id"	: "tabledownloads",
+							"source" 	: "matomo_downloadslist",
+							"data_array": [
+								{
+									"legend": "url du fichier téléchargé",
+									"data"		: "matomo_page"
+								},
+								{
+									"legend": "Nb total de téléchargements uniques",
+									"data"		: "matomo_nbhits"
+								}
+
+							]
+						}
+
+
+					}
+				}
+			],
+			"lrs": [
+				{
+					"dom_id":"lrs01",
+					"label":"Parcours",
+					"display": true,
+					"html": "./html-components/lrs01.html",
+					"button": "btnlrs01",
+					"product_index_lrs": 0,
+					"coursename":"statement.object.definition.name.und",
+					"verbs": "initialized,terminated",
+					"limit_by_request": 100,
+					"url": "https://preprod.tralalere.com/mesure-impact/version-prometheus/php/getLRS.php",
+					"result": {
+						"chart": {
+							"display"	: false
+						},
+						"texts": [
+						],
+						"table":
+						{
+							"display"	: true,
+							"dom_id"	: "tablelrs01",
+							"source" 	: "lrs_traces"
+						}
+					}
+				}
+
+			],
+			"surveys": [
+				{
+					"dom_id":"survey01",
+					"label":"Questionnaire",
+					"display": true,
+					"html": "./html-components/survey01.html",
+					"button": "btnsurvey01",
+					"survey_index_user": 0,
+					"survey_id": 199118,
+					"url": "https://preprod.tralalere.com/mesure-impact/version-prometheus/php/getSurvey.php",
+					"result": {
+						"chart": {
+							"display"	: false
+						},
+						"texts": [
+						],
+						"table":
+						{
+							"display"	: true,
+							"dom_id"	: "tablesurvey01",
+							"source" 	: "responses",
+							"data_array": [
+								{
+									"legend": "Date",
+									"data"		: "submitdate"
+								},
+								{
+									"legend": "Note attribuée",
+									"data"		: "Q00"
+								},
+								{
+									"legend": "La ressource a été facile à utiliser",
+									"data"		: "G01Q04[SQ001]"
+								},
+								{
+									"legend": "Les principaux messages clés ont bien été compris",
+									"data"		: "G01Q04[SQ002]"
+								},
+								{
+									"legend": "Le public a adhéré à la ressource (intérêt, participation…)",
+									"data"		: "G01Q04[SQ003]"
+								},
+								{
+									"legend": "Je recommanderai la ressource",
+									"data"		: "G01Q04[SQ004]"
+								},
+								{
+									"legend": "Pouvez vous nous préciser pourquoi vous avez choisi cette note",
+									"data"		: "G01Q02"
+								},
+								{
+									"legend": "RGPD réponse 1",
+									"data"		: "G01Q03[SQ001]"
+								},
+								{
+									"legend": "RGPD réponse 2",
+									"data"		: "G01Q03[SQ002]"
+								},
+								{
+									"legend": "RGPD réponse 3",
+									"data"		: "G01Q03[SQ003]"
+								}
+
+							]
+						}
+					}
+				}
+
+			]
+		},
+		{
+			"product_title" 		:"ma ressource2",
+			"product_id_matomo" 	:12,
+			"analytics": {
+				"visitors": {
+					"display": true,
+					"url": "../php/getUsers.php"
+				}
+			}
+		}
+	]
+
+
+}

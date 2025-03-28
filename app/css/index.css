@@ -1,0 +1,140 @@
+/*------------- Fonts ---------------*/
+@font-face {
+    font-family: 'MonserratRegular';
+    src: url('../assets/fonts/Montserrat-Regular.ttf');
+}
+@font-face {
+    font-family: 'MonserratBold';
+    src: url('../assets/fonts/Montserrat-Bold.ttf');
+}
+/*------------- general ---------------*/
+html, body {
+	height:100%;
+    font-family: MonserratRegular;
+}
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+h3, .h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+input[type=date] {
+    padding-left:10px;
+    padding-right:10px;
+}
+tbody{
+    max-width:100%;
+}
+tr{
+    max-width:100%;
+}
+td, th {
+    padding-left: 5px;
+    padding-right: 5px;
+    max-width:600px;
+    word-break: break-all;
+}
+.tdlimited{
+    /*max-width:500px;*/
+    font-size: 0.8em;
+}
+/*------------- variations from bootstrap ---------------*/
+.theme-showcase{
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.jumbotron {
+    background-color: rgba(97,10,134,0.2);
+    margin-bottom: 0px;
+}
+.jumbotron p {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/*------------- navbar ---------------*/
+.navbar-inverse {
+    background-color: rgb(97,10,134);
+    border-color: rgb(97,10,134);
+}
+.navbar-inverse .navbar-brand {
+     color: #FFF;
+}
+.profiles{
+background-color: rgba(97,10,134,0.1);
+   /* padding-bottom: 30px;*/
+}
+/*------------- display ---------------*/
+#wait{
+    position:fixed;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    background-image: url('../assets/imgs/wait.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    display:none;
+}
+#greyBackground{
+    position:fixed;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    background-color: rgba(0,0,0,0.8);
+    text-align:center;
+    padding-bottom:30px;
+    display:none;/**/
+}
+
+.container-part{
+    padding:10px;
+    border-top-style: dotted;
+    border-top-width: 0.5px;
+    border-top-color: #888888;
+}
+.impactbtn-default{
+    width:150px;
+}
+.impactbtn-success{
+    /* you can define */
+}
+.desactivated{
+    /* you can define */
+}
+.btn-traces{
+    background-color: rgba(97, 10, 134, 0.1);
+}
+
+.btn-survey{
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.table_entete{
+    font-weight:bold;
+    background-color: rgba(97, 10, 134, 0.1)
+}
+
+.shortinput{
+    width: 60px;
+    text-align: center;
+}
+.infoAdjust{
+    font-size:0.6em;
+}
+/*------------- chart ---------------*/
+.interactiveCanvas{
+    position:relative;
+    max-width:400px;
+    max-height: 300px;
+    background-color: #FFFFFF;
+}
+#chartZoom{
+    background-color: #FFFFFF;
+    width:80%;
+    height:calc(80% - 160px);
+    margin:55px auto;
+}
