@@ -10,7 +10,7 @@
 					"display"	: true,
 					"html"		: "./html-components/visitors.html",
 					"button"	: "btnVisitors",
-					"url"		: "https://preprod.tralalere.com/mesure-impact/version-prometheus/php/getUsers.php",
+					"url"		: "https://mysite.com/getUsers.php",
 					"result": {
 						"chart": {
 							"display"	: true,
@@ -53,7 +53,7 @@
 					"display": true,
 					"html": "./html-components/pages.html",
 					"button": "btnPages",
-					"url": "https://preprod.tralalere.com/mesure-impact/version-prometheus/php/getPages.php",
+					"url": "https://mysite.com/getPages.php",
 					"result": {
 						"chart": {
 							"display"	: false
@@ -94,7 +94,7 @@
 					"display"	: true,
 					"html"		: "./html-components/devices.html",
 					"button"	: "btnDevices",
-					"url"		: "https://preprod.tralalere.com/mesure-impact/version-prometheus/php/getDevices.php",
+					"url"		: "https://mysite.com/getDevices.php",
 					"result": {
 						"chart": {
 							"display"	: true,
@@ -141,7 +141,7 @@
 					"display"	: true,
 					"html"		: "./html-components/browsers.html",
 					"button"	: "btnBrowsers",
-					"url"		: "https://preprod.tralalere.com/mesure-impact/version-prometheus/php/getBrowsers.php",
+					"url"		: "https://mysite.com/getBrowsers.php",
 					"result": {
 						"chart": {
 							"display"	: true,
@@ -188,7 +188,7 @@
 					"display"	: true,
 					"html"		: "./html-components/referrers.html",
 					"button"	: "btnReferrers",
-					"url"		: "https://preprod.tralalere.com/mesure-impact/version-prometheus/php/getReferrers.php",
+					"url"		: "https://mysite.com/getReferrers.php",
 					"result": {
 						"chart": {
 							"display"	: false
@@ -222,7 +222,7 @@
 					"display": true,
 					"html": "./html-components/downloads.html",
 					"button": "btnDownloads",
-					"url": "https://preprod.tralalere.com/mesure-impact/version-prometheus/php/getDownloads.php",
+					"url": "https://mysite.com/getDownloads.php",
 					"result": {
 						"chart": {
 							"display"	: false
@@ -274,7 +274,7 @@
 					"coursename":"statement.object.definition.name.und",
 					"verbs": "initialized,terminated",
 					"limit_by_request": 100,
-					"url": "https://preprod.tralalere.com/mesure-impact/version-prometheus/php/getLRS.php",
+					"url": "https://mysite.com/getLRS.php",
 					"result": {
 						"chart": {
 							"display"	: false
@@ -300,7 +300,7 @@
 					"button": "btnsurvey01",
 					"survey_index_user": 0,
 					"survey_id": 199118,
-					"url": "https://preprod.tralalere.com/mesure-impact/version-prometheus/php/getSurvey.php",
+					"url": "https://mysite.com/getSurvey.php",
 					"result": {
 						"chart": {
 							"display"	: false
